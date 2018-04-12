@@ -1,0 +1,16 @@
+@import "~sass-flex-mixin/flex";
+
+.main-section.landing {
+  height: 100vh;
+  width: 100%;
+  background-color: aquamarine;
+  @include flexbox();
+  @include flex-direction(column);
+  padding: 10px;
+  box-sizing: border-box;
+
+  .header {
+    @include flexbox();
+    @include justify-content(space-between);
+  }
+}

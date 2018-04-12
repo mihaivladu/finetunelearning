@@ -1,0 +1,12 @@
+version: "3.1"
+
+services:
+  finetune-web:
+    build: .
+    image: academicmerit/finetune-web:latest
+    command: npm run dev
+    ports:
+      - "6001:6001"
+    volumes:
+      - ./src:/app/src
+      - ~/.aws:/home/devusr/.aws
