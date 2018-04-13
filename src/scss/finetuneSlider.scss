@@ -49,7 +49,7 @@
 }
 
 .page5 {
-  background-color: #ffffff;
+  background-color: #7761ed;
   left: 80%;
 }
 
@@ -60,15 +60,41 @@ section {
   padding: 50px 4%;
   box-sizing: border-box;
 
-  .title {
-    font-family: 'Roboto Slab Bold', sans-serif;
-    font-size: 4em;
-    color: #1D2225;
+  .data-container {
+    width: 55%;
+
+    .title {
+      font-family: 'Roboto Slab Bold', sans-serif;
+      font-size: 4em;
+    }
+
+    .description {
+      font-family: 'Roboto Light', sans-serif;
+      font-size: 3em;
+    }
   }
 
-  .description {
-    font-family: 'Roboto Light', sans-serif;
-    font-size: 3em;
-    color: #1D2225;
+  &:not(.page5) {
+    .data-container {
+      .title {
+        color: #1D2225;
+      }
+
+      .description {
+        color: #1D2225;
+      }
+    }
+  }
+
+  &.page5 {
+    .data-container {
+      .title {
+        color: #ffffff;
+      }
+
+      .description {
+        color: #ffffff;
+      }
+    }
   }
 }

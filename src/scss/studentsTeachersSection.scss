@@ -1,0 +1,31 @@
+@import '~sass-flex-mixin/flex';
+
+.students-teachers-section {
+  background-color: #00539b;
+  padding: 50px 20%;
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(center);
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  .title,
+  .description {
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .title {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 12em;
+    margin: 0 0 20px;
+  }
+
+  .description {
+    font-family: 'Roboto Slab Bold', sans-serif;
+    font-size: 4em;
+    margin: 20px 0 0;
+  }
+}
