@@ -9,4 +9,5 @@ services:
       - "6001:6001"
     volumes:
       - ./src:/app/src
+      - ./assets:/app/assets
       - ~/.aws:/home/devusr/.aws

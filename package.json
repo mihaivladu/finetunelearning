@@ -22,9 +22,15 @@
     "css-loader": "^0.28.11",
     "sass-loader": "^6.0.7",
     "node-sass": "^4.8.3",
-    "sass-flex-mixin": "^1.0.3"
+    "sass-flex-mixin": "^1.0.3",
+    "imports-loader": "^0.8.0",
+    "url-loader": "^1.0.1",
+    "file-loader": "^1.1.11",
+    "copy-webpack-plugin": "^4.5.1"
   },
   "dependencies": {
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "gsap": "^1.20.4",
+    "scrollmagic": "^2.0.5"
   }
 }

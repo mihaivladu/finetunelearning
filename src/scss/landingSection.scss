@@ -1,16 +1,70 @@
 @import "~sass-flex-mixin/flex";
 
-.main-section.landing {
+.landing-section {
   height: 100vh;
   width: 100%;
-  background-color: aquamarine;
+  background: url('/assets/images/bg__hero.jpg');
+  background-size: cover;
   @include flexbox();
   @include flex-direction(column);
-  padding: 10px;
+  padding: 50px 50px 0 50px;
   box-sizing: border-box;
+  overflow: hidden;
 
   .header {
     @include flexbox();
     @include justify-content(space-between);
+    @include align-items(center);
+    
+    .right-column {
+      a {
+        text-decoration: none;
+        font-size: 1.34em;
+        color: #ffffff;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+
+        &:not(:last-child) {
+          margin-right: 50px;
+        }
+
+        &.round-border {
+          padding: 10px 30px;
+          border: 1px solid #ffffff;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+
+  .content {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+
+    .title,
+    .description {
+      width: 60%;
+    }
+
+    .title {
+      color: #ffffff;
+      font-size: 5.34em;
+      text-align: center;
+      font-stretch: normal;
+      font-family: 'Roboto Slab Bold', sans-serif;
+      margin: 40px 0 20px 0;
+    }
+
+    .description {
+      color: #ffffff;
+      text-align: center;
+      font-size: 4em;
+      font-family: 'Roboto Light', sans-serif;
+      margin: 20px 0;
+    }
   }
 }

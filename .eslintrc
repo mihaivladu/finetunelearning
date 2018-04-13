@@ -1,0 +1,202 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "airbnb"
+  ],
+  "plugins": [ "import", "babel", "react", "jest" ],
+  "settings": {
+    "import/resolver": "webpack"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true,
+    "jest/globals": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "experimentalObjectRestSpread": true,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "semi": ["warn", "always"],
+    "space-before-function-paren": ["warn", {
+      "anonymous": "always", "named": "never", "asyncArrow": "always" }
+    ],
+    "spaced-comment": "off",
+    "no-multi-spaces": "off",
+    "no-trailing-spaces": "off",
+    "padded-blocks": "off",
+    "brace-style": "off",
+    "quotes": "off",
+    "no-mixed-operators": "off",
+    "space-before-blocks": "off",
+    "space-after-blocks": "off",
+    "func-call-spacing": "off",
+    "comma-spacing": "off",
+    "object-curly-newline": "off",
+    "space-unary-ops": "off",
+    "camelcase": "off",
+    "no-extra-boolean-cast": "off",
+    "no-floating-decimal": "off",
+    "no-plusplus": "off",
+    "no-underscore-dangle" : "off",
+    "no-path-concat": "off",
+    "no-nested-ternary": "off",
+    "no-confusing-arrow": "off",
+    "operator-linebreak": "off",
+    "no-useless-escape": "off", // Produces false positives on regex
+    "no-return-assign": "warn", // Allows for arrow function ref > class assignment
+
+    "arrow-spacing": "warn",
+    "indent": ["warn", 2, { "SwitchCase": 1 }],
+    "space-in-parens": "warn",
+    "semi-spacing": "warn",
+    "object-property-newline": "warn",
+    "no-useless-constructor": "warn",
+    "space-infix-ops": "warn",
+    "no-useless-return": "warn",
+    "no-mixed-spaces-and-tabs": "warn",
+    "block-spacing": "warn",
+    "key-spacing": "warn",
+    "eqeqeq": "warn",
+    "keyword-spacing": "warn",
+    "no-unneeded-ternary": "warn",
+    "no-multiple-empty-lines": "warn",
+    "no-return-await": "warn",
+    "max-len": ["warn", 160],
+    "comma-dangle": ["warn", {"arrays": "never", "objects": "only-multiline"}],
+    "consistent-return": "off",
+    "prefer-template": "warn",
+    "no-bitwise": "off",
+    "one-var-declaration-per-line": "off", // should be allowed
+
+    "react/jsx-filename-extension": "off",
+    "react/default-props-match-prop-types" : "off",
+    "react/display-name": ["off", {"ignoreTranspilerName": true}], // less urgent
+    "react/prop-types": ["off", {"ignore": ["children"]}], // off for now, because noisy and less urgent
+
+    "import/no-mutable-exports": "off", // can be off, import bindings are not working yet anyway
+
+    "jsx-a11y/click-events-have-key-events": "off",
+
+
+    // -------- warnings that aspire to be errors -----------
+    "no-empty": "warn",
+    "array-bracket-spacing": "warn",
+    "no-prototype-builtins": "warn", // use !== undefined instead of .hasOwnProp
+    "no-spaced-func": "warn",
+    "no-lonely-if": "warn",
+    "function-paren-newline": "warn",
+    "no-undef": "warn", // Use  /* global FYM_BACKEND_URL */ to decalre globals
+    "no-unused-vars": "warn", // no longer needed for React with eslint-plugin-react
+    "no-tabs": "warn",
+    "arrow-body-style": ["warn", "as-needed"],
+    "arrow-parens": ["warn", "as-needed"],
+    "object-shorthand": "warn",
+    "prefer-destructuring": "warn",
+    "eol-last": "warn",
+    "generator-star-spacing": "warn", // write: function* foo(){..}
+    "no-use-before-define": "warn",
+    "prefer-rest-params": "warn",
+    "no-case-declarations": "warn",
+    "default-case": "warn",
+    "radix": "warn",
+    "no-restricted-globals": "warn",
+    "no-unused-expressions": "warn",
+    "prefer-const": "off", // team convention
+    "object-curly-spacing": ["warn", "always"],
+    "quote-props": "warn",
+    "block-scoped-var": "warn",
+    "prefer-arrow-callback": "warn",
+    "array-callback-return": "warn",
+    "func-names": "warn",
+    "class-methods-use-this": "warn",
+    "no-extra-semi": "warn",
+    "no-shadow": "warn",
+    "no-param-reassign": "warn",
+    "no-else-return": "warn",
+    "dot-notation": "warn",
+    "guard-for-in": "warn",
+    "no-restricted-syntax": "warn",
+    "react/no-string-refs": "warn",
+    "no-multi-assign": "warn",
+    "newline-per-chained-call": "off",
+    "no-var":"warn",
+    "one-var": "warn",
+    "vars-on-top": "warn",
+    "jsx-quotes": "warn",
+    "global-require": "warn",
+
+    "import/no-unresolved": "off",
+    "import/no-duplicates": "warn",
+    "import/no-extraneous-dependencies": "warn",
+    "import/prefer-default-export": "warn",
+    "import/first": "warn",
+    "import/extensions": "off", // todo update import plugin, no longer needed
+    "import/no-named-as-default": "warn",
+    "import/no-named-as-default-member": "warn",
+    "import/no-dynamic-require": "warn",
+    "import/export": "warn",
+    "import/newline-after-import": "warn",
+
+    "react/jsx-tag-spacing": ["warn", {
+      "closingSlash": "never",
+      "beforeSelfClosing": "always",
+      "afterOpening": "never",
+      "beforeClosing": "never"
+    }],
+    "react/jsx-no-comment-textnodes": "warn",
+    "react/jsx-curly-brace-presence": "warn",
+    "react/jsx-no-bind": "warn",
+    "react/jsx-equals-spacing": "warn",
+    "react/jsx-indent": "warn",
+    "react/jsx-indent-props": "warn",
+    "react/jsx-wrap-multilines": "warn",
+    "react/jsx-closing-tag-location": "warn",
+    "react/jsx-curly-spacing": "warn",
+    "react/jsx-closing-bracket-location": "warn",
+    "react/jsx-first-prop-new-line": "warn",
+    "react/jsx-max-props-per-line": "warn",
+    "react/jsx-boolean-value": "warn",
+    "react/jsx-no-target-blank": "warn",
+    "react/sort-comp": "warn",
+    "react/no-typos": "warn",
+    "react/no-unescaped-entities": "warn",
+    "react/no-did-mount-set-state": "warn",
+    "react/prefer-stateless-function": "warn",
+    "react/forbid-prop-types": "off",
+    "react/no-deprecated": "warn",
+    "react/no-unused-prop-types": "warn",
+    "react/self-closing-comp": "warn",
+    "react/no-danger": "off",
+    "react/style-prop-object": "warn",
+    "react/no-find-dom-node": "warn",
+    "react/no-unused-state": "warn",
+    "react/no-array-index-key": "warn",
+    "react/no-children-prop": "off",
+    "react/no-multi-comp": "warn",
+    "react/require-default-props": "warn",
+
+    // off until https://github.com/evcohen/eslint-plugin-jsx-a11y/issues/399 fixed
+    "jsx-a11y/anchor-is-valid": ["off", { // all <a> without href, or <Link> without to should be buttons
+      "components": ["Link"],
+      "specialLink": ["to"],
+      "aspects": ["noHref", "invalidHref", "preferButton"]
+    }],
+    "jsx-a11y/anchor-has-content": "warn",
+    "jsx-a11y/iframe-has-title": "warn",
+    "jsx-a11y/no-noninteractive-element-interactions": "warn",
+    "jsx-a11y/label-has-for": "warn",
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "jsx-a11y/alt-text": "warn",
+    "jsx-a11y/media-has-caption": "warn",
+    "jsx-a11y/no-noninteractive-tabindex": "warn",
+    "no-console":"off"
+  }
+}
